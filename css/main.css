@@ -624,7 +624,20 @@
 		background: linear-gradient(to bottom,  #f0cb49 0%,#e0a637 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0cb49', endColorstr='#e0a637',GradientType=0 ); /* IE6-9 */
 	}
-
+	.gradient-google {
+		background: conic-gradient(from 0deg, #4285f4 110deg, #fbbc05 110deg, #34a853 90deg 180deg, #ea4335 180deg 270deg) 73% 55%/150% 150% no-repeat;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+	  }
+	  .gmail-logo{
+		width: 15px;
+		height: 15px;
+		top: 2px;
+		left: -2px;
+		position: relative;
+	  }
 /*  3.  About Me
 /* ------------------------------------------------------------------------------- */
 
