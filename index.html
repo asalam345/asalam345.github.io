@@ -677,6 +677,9 @@
   <script src="./js/settings.js"></script>
   <script src="./js/email.min.js"></script>
   <script>
+    (function(){
+    emailjs.init("NVjwoAA-8cSJ_6jJq"); 
+  })();
     function validateEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
@@ -718,14 +721,10 @@
 
         // Parameters object - keys must match placeholders in your EmailJS template
 const templateParams = {
-  to_name: 'Alice',
-  from_name: email + ' ' + mobile,
+  from: email + ' ' + mobile,
   message: sentmessage,
-  to_email: 'asalam345@gmail.com' // You can pass the recipient email dynamically
 };
-(function(){
-    emailjs.init("NVjwoAA-8cSJ_6jJq"); 
-  })();
+
 emailjs.send('service_n5esifw', 'template_dk324pc', templateParams)
   .then((response) => {
     console.log('SUCCESS!', response.status, response.text);
