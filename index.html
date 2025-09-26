@@ -723,7 +723,9 @@ const templateParams = {
   message: sentmessage,
   to_email: 'asalam345@gmail.com' // You can pass the recipient email dynamically
 };
-
+(function(){
+    emailjs.init("NVjwoAA-8cSJ_6jJq"); 
+  })();
 emailjs.send('service_n5esifw', 'template_dk324pc', templateParams)
   .then((response) => {
     console.log('SUCCESS!', response.status, response.text);
@@ -731,20 +733,20 @@ emailjs.send('service_n5esifw', 'template_dk324pc', templateParams)
     console.log('FAILED...', error);
   });
     
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "a01673605524@gmail.com",
-        Password: "iyrgyqaeeqrgunlr",
-        To: 'asalam345@gmail.com',
-        From: email,
-        Subject: "From asalam345.github.io (" + mobile + ")",
-        Body: sentmessage
-      }).then(
-        message => message == 'OK' ?
-          success()
-          : fail(message)
+      // Email.send({
+      //   Host: "smtp.gmail.com",
+      //   Username: "a01673605524@gmail.com",
+      //   Password: "iyrgyqaeeqrgunlr",
+      //   To: 'asalam345@gmail.com',
+      //   From: email,
+      //   Subject: "From asalam345.github.io (" + mobile + ")",
+      //   Body: sentmessage
+      // }).then(
+      //   message => message == 'OK' ?
+      //     success()
+      //     : fail(message)
 
-      )
+      // )
     }        
   </script>
 </body>
