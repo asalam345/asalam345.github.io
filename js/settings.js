@@ -262,48 +262,48 @@ $(function () {
     /* --------------------------------------------------------------------------- */
     /*  Google Maps
     /* --------------------------------------------------------------------------- */
-    (function () {
-        if (document.location.hash.substr(1) === 'contacts') {
-            initGmap();
-        } else {
-            $(window).hashchange(function () {
-                if (document.location.hash.substr(1) === 'contacts') {
-                    initGmap();
-                }
-            });
-        }
+    // (function () {
+    //     if (document.location.hash.substr(1) === 'contacts') {
+    //         initGmap();
+    //     } else {
+    //         $(window).hashchange(function () {
+    //             if (document.location.hash.substr(1) === 'contacts') {
+    //                 initGmap();
+    //             }
+    //         });
+    //     }
 
-        // Initialize Gmap
-        function initGmap() {
-            var position = new google.maps.LatLng(36.143247, -115.160151);
+    //     // Initialize Gmap
+    //     function initGmap() {
+    //         var position = new google.maps.LatLng(36.143247, -115.160151);
 
-            $('#map').gmap3({
-                map: {
-                    options: {
-                        center: position,
-                        zoom: 15,
-                    }
-                },
-                marker: {
-                    values: [
-                        {latLng: position},
-                        {latLng: [36.149762, -115.152726]}
-                    ],
-                    options: {
-                        draggable: false,
-                        icon: 'images/gmap_marker.png'
-                    }
-                }
-            });
-        }
+    //         $('#map').gmap3({
+    //             map: {
+    //                 options: {
+    //                     center: position,
+    //                     zoom: 15,
+    //                 }
+    //             },
+    //             marker: {
+    //                 values: [
+    //                     {latLng: position},
+    //                     {latLng: [36.149762, -115.152726]}
+    //                 ],
+    //                 options: {
+    //                     draggable: false,
+    //                     icon: 'images/gmap_marker.png'
+    //                 }
+    //             }
+    //         });
+    //     }
 
-        // Pan map
-        $('.pan').click(function () {
-            var lat = $(this).data('lat'),
-                lng = $(this).data('lng');
-            $('#map').gmap3('get').panTo(new google.maps.LatLng(lat, lng));
-            $('.map-pan').find('div').removeClass('pan-active');
-            $(this).addClass('pan-active');
-        });
-    })();
+    //     // Pan map
+    //     $('.pan').click(function () {
+    //         var lat = $(this).data('lat'),
+    //             lng = $(this).data('lng');
+    //         $('#map').gmap3('get').panTo(new google.maps.LatLng(lat, lng));
+    //         $('.map-pan').find('div').removeClass('pan-active');
+    //         $(this).addClass('pan-active');
+    //     });
+    // })();
 });
