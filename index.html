@@ -737,15 +737,15 @@ let lng = 90.435419;
         fail('Please write a proper message!');
         return;
       }
-
+console.log(email);
 const templateParams = {
-  from_name: email,
+  from_email: email,
   user_mobile: mobile,
   message: sentmessage,
 to_name: name,
       to_email: "asalam345@gmail.com"
 };
-//{{from_name}} 
+
 emailjs.send('service_n5esifw', 'template_dk324pc', templateParams)
   .then((response) => {
     console.log('SUCCESS!', response.status, response.text);
