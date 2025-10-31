@@ -176,7 +176,6 @@
 		margin: 20px 20px 0 0;
 		padding: 15px;
 		width: 490px;
-		height:432px;
 	}
 
 	.full-width {
@@ -236,6 +235,7 @@
 
 	.right-column .substrate {
 		width: 450px;
+		height:434px;
 	}
 
 	#resume .right-column .substrate {
