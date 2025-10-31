@@ -167,14 +167,14 @@
 	.left-column {
 		float: left;
 		margin: 20px 0 0 20px;
-		padding: 15px;
+		padding: 0 15px;
 		width: 270px;
 	}
 
 	.right-column {
 		float: right;
 		margin: 20px 20px 0 0;
-		padding: 15px;
+		padding: 0 15px;
 		width: 490px;
 	}
 
