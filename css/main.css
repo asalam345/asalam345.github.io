@@ -235,7 +235,7 @@
 
 	.right-column .substrate {
 		width: 450px;
-		height:434px;
+		height:auto;
 	}
 
 	#resume .right-column .substrate {
