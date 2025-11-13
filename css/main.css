@@ -1792,8 +1792,10 @@
 -------------------------------------------*/
 	#map {
 		width: 450px;
-		height: 300px;
+		max-height: 100vh;
+		height: 374px;
 		border: 1px solid #ddd;
+		overflow: hidden;
 	}
 
 	.div-info {
